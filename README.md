@@ -6,6 +6,34 @@ Why AI Needs a New Operating Platform?
   Linux manages processes. VMware manages VMs. Kubernetes manages containers. Open AI OS manages AI.
 
 
+$$OpenAIOS = \text{Kernel} + \text{User Space Utilities} + \text{AI Runtime Stack} + \text{Model Serving} + \text{AI Platform Services} + \text{AI Apps (Reference/CLI)}$$
+
+---
+
+### Architecture Layers (Layers 1 to 5)
+
+```
++-----------------------------------------------------------------------+
+| 5. AI APPLICATIONS / REF IMPLEMENTATIONS                              |
+|    VaaniAI Core Daemon · CLI Management Tools · Agent Orchestrator    |
++-----------------------------------------------------------------------+
+| 4. AI PLATFORM SERVICES (The "OS Intelligence" Layer)                |
+|    Agent Runtime  ·  Workflow Engine  ·  API Gateway  ·  Security Svc |
++-----------------------------------------------------------------------+
+| 3. MODEL SERVING LAYER                                                |
+|    vLLM  ·  Ollama  ·  Triton Inference Server  ·  llama.cpp          |
++-----------------------------------------------------------------------+
+| 2. AI RUNTIME STACK                                                   |
+|    CUDA / ROCm  ·  Container Runtime (containerd)  ·  GPU Scheduler   |
++-----------------------------------------------------------------------+
+| 1. OPENAIOS HARDWARE ABSTRACTION LAYER (Debian Kernel + Drivers)      |
+|    GPU Kernel  ·  XFS + io_uring  ·  NUMA/HugePages  ·  CPU Isolation  |
++-----------------------------------------------------------------------+
+| BASE HARDWARE                                                         |
+|    CPUs (x86_64)  ·  GPUs (NVIDIA/AMD)  ·  NVMe Storage  ·  Networking|
++-----------------------------------------------------------------------+
+
+```
 # Open AI OS Base Image Build
 
 ## Platform Decision
