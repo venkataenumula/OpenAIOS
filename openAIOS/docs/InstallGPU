@@ -1,0 +1,67 @@
+For ≤ 2-minute audio, single user / few concurrent users, you do NOT need a datacenter GPU.
+
+What VaaniAI actually needs?
+
+        STT (Whisper-like) → GPU heavy
+        Translation (HF models) → moderate GPU
+        LLM response → can be CPU or small GPU
+        TTS → light GPU or CPU
+
+
+What are the Target GPU capabilities
+      6–12 GB VRAM is enough
+      CUDA support
+      Good FP16 performance
+      Low power
+
+
+BIOS setting (IMPORTANT)
+    
+    PCIe Slot Speed → Gen3 (manual)
+    Above 4G Decoding → Enabled
+
+Expected performance for VaaniAI
+
+        With RTX 3060 (12 GB):
+                Whisper-medium:   → ~5–8× faster than CPU
+                Translation models: near-instant
+                TTS: realtime
+                End-to-end latency (1 min audio): → <10–15 seconds total
+
+
+Hardware:
+✅ Ubuntu Server 24.04 LTS Supported PC
+✅ NVIDIA RTX 3060 12GB  or MSI GeForce RTX 3060 Ventus 2X or NVIDIA RTX A2000 12GB
+✅ PCIe x16 Gen3 flexible riser (20–30 cm)  or “PCIe x16 active riser / retimer Gen3/Gen4”
+✅ 650W ATX PSU
+✅ PSU jumper adapter
+✅ Open-air GPU bracket
+
+
+Comparison table
+                1. NVIDIA GeForce RTX 3060 12GB:
+                VRAM	12 GB
+                Power / size	Standard desktop GPU; moderate power ~170W
+                Typical POC use	Best overall single GPU
+                Best for Broadest value
+                Price: Lower
+                2. MSI GeForce RTX 3060 Ventus 2X
+                VRAM	12 GB
+                Power / size	Standard desktop; moderate
+                Typical POC use	Best overall single GPU	Higher‑budget 3060   ~170W
+                Best for Broadest value	New
+                Price: Medium
+                3. NVIDIA RTX A2000 12GB
+                VRAM	12 GB
+                Power / size	70 W max, low‑profile class
+                Typical POC  Quiet, low‑power build
+                Best for Small servers, tight PSU
+                Price: Higher
+
+
+Software:
+✅ Ubuntu Server 24.04 LTS
+✅ Containers only
+✅ NVIDIA driver 550+ (host)
+✅ CUDA via containers
+✅ faster-whisper on RTX 3060 / A2000
