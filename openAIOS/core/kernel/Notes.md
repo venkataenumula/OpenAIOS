@@ -2,9 +2,7 @@ For Open AI OS, I would **not maintain a fork of the Linux kernel**. That become
 Instead, we maintain  **custom Open AI OS kernel configuration and build pipeline** that tracks the latest Debian kernel releases.
 **It has some custom modules that handles other functionality **
 
-
-
-Think of it like:
+Process:
 
 ```text
 Debian Kernel Source
@@ -38,7 +36,7 @@ while staying close to upstream Debian.
 
 ---
 
-# Phase 1: Base Kernel Selection
+# 1: Base Kernel Selection
 
 Always start from:
 
@@ -73,7 +71,7 @@ openaios-kernel-config.git
 
 ---
 
-# Phase 2: Create Open AI OS Kernel Profile
+# 2: Create Open AI OS Kernel Profile
 
 ```text
 debian.config
@@ -131,7 +129,7 @@ CONFIG_NETFILTER=y
 
 ---
 
-# Phase 3: Remove Unnecessary Features
+# 3: Remove Unnecessary Features
 
 Disable:
 
@@ -181,7 +179,7 @@ Optional profile.
 
 ---
 
-# Phase 4: AI Optimizations
+# 4: AI Optimizations
 
 Enable:
 
@@ -253,7 +251,7 @@ Networking
 
 ---
 
-# Phase 5: AI-Specific Kernel Modules
+# 5: AI-Specific Kernel Modules
 
 Future Open AI OS modules:
 
@@ -269,7 +267,7 @@ Do not rush kernel development.
 
 ---
 
-# Phase 6: Kernel Build Pipeline
+# 6: Kernel Build Pipeline
 
 Repository:
 
@@ -310,7 +308,7 @@ linux-headers-openaios
 
 ---
 
-# Phase 7: Security Hardening
+# 7: Security Hardening
 
 Enable:
 
@@ -334,7 +332,7 @@ TPM Support
 
 ---
 
-# Phase 8: Open AI OS Update Integration
+# 8: Open AI OS Update Integration
 
 Kernel becomes part of the OS image.
 
