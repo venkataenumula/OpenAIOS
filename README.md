@@ -8,7 +8,6 @@ Why AI Needs a New Operating Platform?
 
 $$OpenAIOS = \text{Kernel} + \text{User Space Utilities} + \text{AI Runtime Stack} + \text{Model Serving} + \text{AI Platform Services} + \text{AI Apps (Reference/CLI)}$$
 
-
 # Overview
 OpenAIOS delivers a fully integrated AI operating platform consisting of five core layers.
 
@@ -20,6 +19,14 @@ OpenAIOS delivers a fully integrated AI operating platform consisting of five co
 | **Layer 2** | **AI Runtime Platform** | NVIDIA and AMD GPU support, CUDA and ROCm integration, container runtime, resource management, AI workload scheduling. |
 | **Layer 1** | **AI-Optimized Linux Foundation** | GPU-tuned Linux kernel, performance-optimized system configuration, secure OS hardening, automated hardware detection. |
 
+### Key Differentiators
+    Turnkey Infrastructure: Boots straight out of the installer into an operational AI environment. No manual driver, container, or network routing assembly required.
+
+    GPU-First Architecture: Eliminates overhead inside the storage, memory allocation, and CPU scheduling paths specifically to maximize tensor calculations.
+
+    Unified Open Fabric: Built from scratch to support diverse serving packages and model definitions without locking down framework flexibility.
+
+    Local Identity Footprint: Complete control over data flows. No compulsory external cloud lookups unless configured by choice.
 ---
 
 ## Executive Summary
